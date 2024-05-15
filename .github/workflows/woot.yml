@@ -1,8 +1,19 @@
-- name: woot ai
-  uses: bemijonathan/Woot@1.0.2
-  with:
-       githubToken: ${{ secrets.GITHUB_TOKEN }}
-       openAIKey: ${{ secrets.OPEN_AI_KEY }}
-       jiraEmail: ${{ secrets.JIRA_EMAIL }}
-       jiraApiKey: ${{ secrets.JIRA_API_KEY }}
-       jiraHost: ${{ secrets.JIRA_HOST }}
+name: woot ai
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+      - "releases/*"
+
+jobs:
+  check-requirements:
+    - name: woot
+      uses: bemijonathan/Woot@1.0.2
+      with:
+         githubToken: ${{ secrets.GITHUB_TOKEN }}
+         openAIKey: ${{ secrets.OPEN_AI_KEY }}
+         jiraEmail: ${{ secrets.JIRA_EMAIL }}
+         jiraApiKey: ${{ secrets.JIRA_API_KEY }}
+         jiraHost: ${{ secrets.JIRA_HOST }}
