@@ -8,9 +8,9 @@ on:
       - "releases/*"
 
 jobs:
-  test-typescript:
-    name: TypeScript Tests
-    runs-on: ubuntu-latest
+  # test-typescript:
+  #   name: TypeScript Tests
+  #   runs-on: ubuntu-latest
 
 #    steps:
 #      - name: Checkout
