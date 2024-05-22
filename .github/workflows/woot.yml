@@ -19,7 +19,7 @@ jobs:
     steps:
       - name: Test Local Action
         id: test-action
-        uses: bemijonathan/Woot@1.0.2
+        uses: bemijonathan/Woot@1.0.3
         with:
           gitHubToken: ${{ secrets.GIT_HUB_TOKEN }}
           openAIKey: ${{ secrets.OPENAI_API_KEY }}
