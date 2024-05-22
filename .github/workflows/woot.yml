@@ -12,26 +12,6 @@ jobs:
   #   name: TypeScript Tests
   #   runs-on: ubuntu-latest
 
-#    steps:
-#      - name: Checkout
-#        id: checkout
-#        uses: actions/checkout@v3
-#
-#      - name: Setup Node.js
-#        id: setup-node
-#        uses: actions/setup-node@v3
-#        with:
-#          node-version: 20
-#          cache: npm
-#
-#      - name: Install Dependencies
-#        id: npm-ci
-#        run: npm ci
-#
-#      - name: Check Format
-#        id: npm-format-check
-#        run: npm run format:check
-
   test-action:
     name: GitHub Actions Test
     runs-on: ubuntu-latest
@@ -39,7 +19,7 @@ jobs:
     steps:
       - name: Test Local Action
         id: test-action
-        uses: ./
+        uses: bemijonathan/Woot@1.0.2
         with:
           gitHubToken: ${{ secrets.GIT_HUB_TOKEN }}
           openAIKey: ${{ secrets.OPENAI_API_KEY }}
